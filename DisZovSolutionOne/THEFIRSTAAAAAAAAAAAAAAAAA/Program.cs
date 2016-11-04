@@ -14,6 +14,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
             Console.WriteLine("Please make all deposits in rear~");
             bool running = true;
             String userInput = "";
+            NumberCruncher cruncher = new NumberCruncher();
             while (running)
             {
                 Console.WriteLine("Would you like to run a calculation?");
@@ -22,15 +23,48 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                 userInput = userInput.ToLower();
                 if (userInput.Equals("y") || userInput.Equals("yes") || userInput.Equals("ye"))
                 {
+                    bool invalidInput;
+                    double num1, num2;
+                    do
+                    {
+                        Console.WriteLine("Please enter the first number: ");
+                        userInput = Console.ReadLine();
+                        if (double.TryParse(userInput, out num1))
+                        {
+                            Console.WriteLine("The first number is: " + num1);
+                            invalidInput = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error, please only input numbers!");
+                            invalidInput = true;
+                        }
+                    } while (invalidInput);
+
+                    do
+                    {
+                        Console.WriteLine("Please enter the second number: ");
+                        userInput = Console.ReadLine();
+                        if (double.TryParse(userInput, out num2))
+                        {
+                            Console.WriteLine("The second number is: " + num2);
+                            invalidInput = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error, please only input numbers!");
+                            invalidInput = true;
+                        }
+                    } while (invalidInput);
                     Console.WriteLine("What calculation would you like to run?");
                     Console.WriteLine("Available options: [+], [-], [x], [/]");
                     userInput = Console.ReadLine();
-                    userInput = userInput.ToLower();
+                    userInput = userInput.ToLower();                    
                     switch (userInput)
                     {
                         case "+":
                         case "[+]":
-                            Console.WriteLine("Oh no, this isn't implemented yet! (ADD)");
+                            Console.WriteLine(num1 + " plus " + num2 + " is: " + cruncher.add(num1, num2));
                             break;
                         case "-":
                         case "[-]":
