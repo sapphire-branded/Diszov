@@ -17,15 +17,48 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
             while (running)
             {
                 Console.WriteLine("Would you like to run a calculation?");
+                Console.WriteLine("Available inputs: 'y', 'yes', 'ye'");
                 userInput = Console.ReadLine();
                 userInput = userInput.ToLower();
-                if (userInput.Equals("y") || userInput.Equals("yes"))
+                if (userInput.Equals("y") || userInput.Equals("yes") || userInput.Equals("ye"))
                 {
-                    Console.WriteLine("Well, too bad! That's not implemented!");
-                }
-                else
-                {
-                    running = false;
+                    Console.WriteLine("What calculation would you like to run?");
+                    Console.WriteLine("Available options: [+], [-], [x], [/]");
+                    userInput = Console.ReadLine();
+                    userInput = userInput.ToLower();
+
+                    if (userInput.Equals("+") || userInput.Equals("[+]"))
+                    {
+                        Console.WriteLine("Oh no, this isn't implemented yet! (ADD)");
+                    }
+                    if (userInput.Equals("-") || userInput.Equals("[-]"))
+                    {
+                        Console.WriteLine("Oh no, this isn't implemented yet! (SUB)");
+                    }
+                    else
+                    {
+                        string caseSwitch = userInput;
+                        switch (caseSwitch)
+                        {
+                            case "x":
+                            case "[x]":
+                                caseSwitch = "x";
+                                Console.WriteLine("Oh no, this isn't implemented yet! (MULT)");
+                                userInput = Console.ReadLine();
+                                running = false;
+                                break;
+                            case "/":
+                            case "[/]":
+                                caseSwitch = "/";
+                                Console.WriteLine("Oh no, this isn't implemented yet! (DIVI)");
+                                userInput = Console.ReadLine();
+                                running = false;
+                                break;
+                            default:
+                                running = false;
+                                break;
+                        }
+                    }
                 }
             }
             Console.Read();
