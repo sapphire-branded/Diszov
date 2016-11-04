@@ -26,40 +26,31 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                     Console.WriteLine("Available options: [+], [-], [x], [/]");
                     userInput = Console.ReadLine();
                     userInput = userInput.ToLower();
-
-                    if (userInput.Equals("+") || userInput.Equals("[+]"))
+                    switch (userInput)
                     {
-                        Console.WriteLine("Oh no, this isn't implemented yet! (ADD)");
-                    }
-                    if (userInput.Equals("-") || userInput.Equals("[-]"))
-                    {
-                        Console.WriteLine("Oh no, this isn't implemented yet! (SUB)");
-                    }
-                    else
-                    {
-                        string caseSwitch = userInput;
-                        switch (caseSwitch)
-                        {
-                            case "x":
-                            case "[x]":
-                                caseSwitch = "x";
-                                Console.WriteLine("Oh no, this isn't implemented yet! (MULT)");
-                                userInput = Console.ReadLine();
-                                running = false;
-                                break;
-                            case "/":
-                            case "[/]":
-                                caseSwitch = "/";
-                                Console.WriteLine("Oh no, this isn't implemented yet! (DIVI)");
-                                userInput = Console.ReadLine();
-                                running = false;
-                                break;
-                            default:
-                                running = false;
-                                break;
-                        }
+                        case "+":
+                        case "[+]":
+                            Console.WriteLine("Oh no, this isn't implemented yet! (ADD)");
+                            break;
+                        case "-":
+                        case "[-]":
+                            Console.WriteLine("Oh no, this isn't implemented yet! (SUB)");
+                            break;
+                        case "x":
+                        case "[x]":
+                            Console.WriteLine("Oh no, this isn't implemented yet! (MULT)");
+                            break;
+                        case "/":
+                        case "[/]":
+                            Console.WriteLine("Oh no, this isn't implemented yet! (DIVI)");
+                            break;
+                        default:
+                            Console.WriteLine(userInput + " is not an accepted command!");
+                            break;
                     }
                 }
+                else
+                    running = false;
             }
             Console.Read();
         }
