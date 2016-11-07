@@ -68,15 +68,15 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                             break;
                         case "-":
                         case "[-]":
-                            Console.WriteLine("Oh no, this isn't implemented yet! (SUB)");
+                            Console.WriteLine(num1 + " minus " + num2 + " is: " + cruncher.minus(num1, num2));
                             break;
                         case "x":
                         case "[x]":
-                            Console.WriteLine("Oh no, this isn't implemented yet! (MULT)");
+                            Console.WriteLine(num1 + " multiplied by " + num2 + " is: " + cruncher.mult(num1, num2));
                             break;
                         case "/":
                         case "[/]":
-                            Console.WriteLine("Oh no, this isn't implemented yet! (DIVI)");
+                            Console.WriteLine(num1 + " divided by " + num2 + " is: " + cruncher.div(num1, num2));
                             break;
                         default:
                             Console.WriteLine(userInput + " is not an accepted command!");
