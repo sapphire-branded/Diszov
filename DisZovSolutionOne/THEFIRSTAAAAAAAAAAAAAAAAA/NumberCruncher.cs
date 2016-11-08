@@ -47,11 +47,11 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
             string userInput = "";
             do
             {
-                Console.WriteLine("Please enter the first number: ");
+                Console.WriteLine("Please enter the desired number: ");
                 userInput = Console.ReadLine();
                 if (double.TryParse(userInput, out num1))
                 {
-                    Console.WriteLine("The first number is: " + num1);
+                    Console.WriteLine("The chosen number is: " + num1);
                     invalidInput = false;
                 }
                 else
