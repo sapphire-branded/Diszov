@@ -37,7 +37,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
 
         public double squareRoot(double num1)
         {
-            return 0;
+            return System.Math.Sqrt(num1);
         }
 
         public double getNumber()
