@@ -39,5 +39,28 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
         {
             return 0;
         }
+
+        public double getNumber()
+        {
+            bool invalidInput;
+            double num1;
+            string userInput = "";
+            do
+            {
+                Console.WriteLine("Please enter the first number: ");
+                userInput = Console.ReadLine();
+                if (double.TryParse(userInput, out num1))
+                {
+                    Console.WriteLine("The first number is: " + num1);
+                    invalidInput = false;
+                }
+                else
+                {
+                    Console.WriteLine("Error, please only input numbers!");
+                    invalidInput = true;
+                }
+            } while (invalidInput);
+            return num1;
+        }
     }
 }
