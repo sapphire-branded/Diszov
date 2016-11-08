@@ -34,7 +34,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                         case "[+]":
                             Console.WriteLine("Please input the first number");
                             num1 = cruncher.getNumber();
-                            Console.WriteLine("Please input the first number");
+                            Console.WriteLine("Please input the second number");
                             num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " plus " + num2 + " is: " + cruncher.add(num1, num2));
                             break;
@@ -42,7 +42,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                         case "[-]":
                             Console.WriteLine("Please input the first number");
                             num1 = cruncher.getNumber();
-                            Console.WriteLine("Please input the first number");
+                            Console.WriteLine("Please input the second number");
                             num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " minus " + num2 + " is: " + cruncher.minus(num1, num2));
                             break;
@@ -50,7 +50,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                         case "[x]":
                             Console.WriteLine("Please input the first number");
                             num1 = cruncher.getNumber();
-                            Console.WriteLine("Please input the first number");
+                            Console.WriteLine("Please input the second number");
                             num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " multiplied by " + num2 + " is: " + cruncher.mult(num1, num2));
                             break;
@@ -58,7 +58,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                         case "[/]":
                             Console.WriteLine("Please input the first number");
                             num1 = cruncher.getNumber();
-                            Console.WriteLine("Please input the first number");
+                            Console.WriteLine("Please input the second number");
                             num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " divided by " + num2 + " is: " + cruncher.div(num1, num2));
                             break;
