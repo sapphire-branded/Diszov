@@ -64,7 +64,6 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                             break;
                         case "^":
                         case "[^]":
-                            Console.WriteLine("Please input the desired number");
                             num1 = cruncher.getNumber();
                             Console.WriteLine(num1 + " squared is: " + cruncher.square(num1));
                             break;
@@ -72,7 +71,6 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                         case "[r]":
                         case "R":
                         case "[R]":
-                            Console.WriteLine("Please input the desired number");
                             num1 = cruncher.getNumber();
                             Console.WriteLine("The square root of " + num1 + " is: " + cruncher.squareRoot(num1));
                             break;
