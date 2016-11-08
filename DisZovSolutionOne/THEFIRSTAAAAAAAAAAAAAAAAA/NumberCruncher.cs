@@ -32,7 +32,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
 
         public double square(double num1)
         {
-            return 0;
+            return System.Math.Pow(num1, num1);
         }
 
         public double squareRoot(double num1)
