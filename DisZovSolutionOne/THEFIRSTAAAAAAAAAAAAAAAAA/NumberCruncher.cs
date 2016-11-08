@@ -29,5 +29,15 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
         {
             return (num1 / num2);
         }
+
+        public double square(double num1)
+        {
+            return 0;
+        }
+
+        public double squareRoot(double num1)
+        {
+            return 0;
+        }
     }
 }

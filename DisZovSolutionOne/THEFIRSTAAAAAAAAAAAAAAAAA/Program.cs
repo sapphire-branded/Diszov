@@ -57,7 +57,7 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                         }
                     } while (invalidInput);
                     Console.WriteLine("What calculation would you like to run?");
-                    Console.WriteLine("Available options: [+], [-], [x], [/]");
+                    Console.WriteLine("Available options: [+], [-], [x], [/], [^], [r]");
                     userInput = Console.ReadLine();
                     userInput = userInput.ToLower();                    
                     switch (userInput)
@@ -77,6 +77,16 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                         case "/":
                         case "[/]":
                             Console.WriteLine(num1 + " divided by " + num2 + " is: " + cruncher.div(num1, num2));
+                            break;
+                        case "^":
+                        case "[^]":
+                            Console.WriteLine(num1 + " squared is: " + cruncher.square(num1));
+                            break;
+                        case "r":
+                        case "[r]":
+                        case "R":
+                        case "[R]":
+                            Console.WriteLine("The square root of " + num1 + " is: " + cruncher.squareRoot(num1));
                             break;
                         default:
                             Console.WriteLine(userInput + " is not an accepted command!");
