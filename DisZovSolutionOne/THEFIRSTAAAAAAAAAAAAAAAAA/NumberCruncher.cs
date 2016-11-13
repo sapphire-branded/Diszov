@@ -62,5 +62,15 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
             } while (invalidInput);
             return num1;
         }
+
+        public double[] getNumbers(int numOfNumbers)
+        {
+            double[] numbers = new double[numOfNumbers];
+            for (int i =0; i < numOfNumbers; i++)
+            {
+                numbers[i] = getNumber();
+            }
+            return numbers;
+        }
     }
 }
