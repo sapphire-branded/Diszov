@@ -23,60 +23,56 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                 userInput = userInput.ToLower();
                 if (userInput.Equals("y") || userInput.Equals("yes") || userInput.Equals("ye"))
                 {
-                    bool invalidInput;
-                    double num1, num2;
-                    do
-                    {
-                        Console.WriteLine("Please enter the first number: ");
-                        userInput = Console.ReadLine();
-                        if (double.TryParse(userInput, out num1))
-                        {
-                            Console.WriteLine("The first number is: " + num1);
-                            invalidInput = false;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Error, please only input numbers!");
-                            invalidInput = true;
-                        }
-                    } while (invalidInput);
-
-                    do
-                    {
-                        Console.WriteLine("Please enter the second number: ");
-                        userInput = Console.ReadLine();
-                        if (double.TryParse(userInput, out num2))
-                        {
-                            Console.WriteLine("The second number is: " + num2);
-                            invalidInput = false;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Error, please only input numbers!");
-                            invalidInput = true;
-                        }
-                    } while (invalidInput);
                     Console.WriteLine("What calculation would you like to run?");
-                    Console.WriteLine("Available options: [+], [-], [x], [/]");
+                    Console.WriteLine("Available options: [+], [-], [x], [/], [^], [r]");
                     userInput = Console.ReadLine();
-                    userInput = userInput.ToLower();                    
+                    userInput = userInput.ToLower();
+                    double num1, num2;          
                     switch (userInput)
                     {
                         case "+":
                         case "[+]":
+                            Console.WriteLine("Please input the first number");
+                            num1 = cruncher.getNumber();
+                            Console.WriteLine("Please input the second number");
+                            num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " plus " + num2 + " is: " + cruncher.add(num1, num2));
                             break;
                         case "-":
                         case "[-]":
+                            Console.WriteLine("Please input the first number");
+                            num1 = cruncher.getNumber();
+                            Console.WriteLine("Please input the second number");
+                            num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " minus " + num2 + " is: " + cruncher.minus(num1, num2));
                             break;
                         case "x":
                         case "[x]":
+                            Console.WriteLine("Please input the first number");
+                            num1 = cruncher.getNumber();
+                            Console.WriteLine("Please input the second number");
+                            num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " multiplied by " + num2 + " is: " + cruncher.mult(num1, num2));
                             break;
                         case "/":
                         case "[/]":
+                            Console.WriteLine("Please input the first number");
+                            num1 = cruncher.getNumber();
+                            Console.WriteLine("Please input the second number");
+                            num2 = cruncher.getNumber();
                             Console.WriteLine(num1 + " divided by " + num2 + " is: " + cruncher.div(num1, num2));
+                            break;
+                        case "^":
+                        case "[^]":
+                            num1 = cruncher.getNumber();
+                            Console.WriteLine(num1 + " squared is: " + cruncher.square(num1));
+                            break;
+                        case "r":
+                        case "[r]":
+                        case "R":
+                        case "[R]":
+                            num1 = cruncher.getNumber();
+                            Console.WriteLine("The square root of " + num1 + " is: " + cruncher.squareRoot(num1));
                             break;
                         default:
                             Console.WriteLine(userInput + " is not an accepted command!");

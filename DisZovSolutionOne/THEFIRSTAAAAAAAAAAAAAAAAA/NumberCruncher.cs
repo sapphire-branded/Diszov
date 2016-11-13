@@ -29,5 +29,38 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
         {
             return (num1 / num2);
         }
+
+        public double square(double num1)
+        {
+            return System.Math.Pow(num1, 2);
+        }
+
+        public double squareRoot(double num1)
+        {
+            return System.Math.Sqrt(num1);
+        }
+
+        public double getNumber()
+        {
+            bool invalidInput;
+            double num1;
+            string userInput = "";
+            do
+            {
+                Console.WriteLine("Please enter the desired number: ");
+                userInput = Console.ReadLine();
+                if (double.TryParse(userInput, out num1))
+                {
+                    Console.WriteLine("The chosen number is: " + num1);
+                    invalidInput = false;
+                }
+                else
+                {
+                    Console.WriteLine("Error, please only input numbers!");
+                    invalidInput = true;
+                }
+            } while (invalidInput);
+            return num1;
+        }
     }
 }
