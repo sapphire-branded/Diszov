@@ -32,11 +32,11 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                     {
                         case "+":
                         case "[+]":
-                            Console.WriteLine("Please input the first number");
-                            num1 = cruncher.getNumber();
-                            Console.WriteLine("Please input the second number");
-                            num2 = cruncher.getNumber();
-                            Console.WriteLine(num1 + " plus " + num2 + " is: " + cruncher.add(num1, num2));
+                            Console.WriteLine("Please input the number of numbers you wish to add");
+                            int numOfNumbers = cruncher.getNumOfNumbers(2);
+                            double[] numbers = cruncher.getNumbers(numOfNumbers);
+                            double result = cruncher.add(numbers);
+                            Console.WriteLine(cruncher.getCalculationString(numbers, result, "plus"));
                             break;
                         case "-":
                         case "[-]":

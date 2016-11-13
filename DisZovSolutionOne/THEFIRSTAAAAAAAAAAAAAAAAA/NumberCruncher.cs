@@ -15,6 +15,16 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
             return (num1 + num2);
         }
 
+        public double add(double[] numbers)
+        {
+            double result = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                result += numbers[i];
+            }
+            return result;
+        }
+
         public double minus(double num1, double num2)
         {
             return (num1 - num2);
@@ -71,6 +81,59 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
                 numbers[i] = getNumber();
             }
             return numbers;
+        }
+
+        public int getNumOfNumbers(int min)
+        {
+            bool invalidInput;
+            int num1;
+            string userInput = "";
+            do
+            {
+                userInput = Console.ReadLine();
+                if (int.TryParse(userInput, out num1))
+                {
+                    if(num1 >= min)
+                    {
+                        Console.WriteLine("The chosen number is: " + num1);
+                        invalidInput = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The chosen number is too low! Please enter a number higher than " + min);
+                        invalidInput = true;
+                        Console.WriteLine("Please enter the number of numbers you wish to perform calculations on: ");
+                    }                    
+                }
+                else
+                {
+                    Console.WriteLine("Error, please only input numbers!");
+                    invalidInput = true;
+                    Console.WriteLine("Please enter the number of numbers you wish to perform calculations on: ");
+                }
+            } while (invalidInput);
+            return num1;
+        }
+
+        public string getCalculationString(double[] inputs, double result, string operation)
+        {
+            string calcString = "";
+            for (int i = 0; i < inputs.Length; i++)
+            {
+                calcString = calcString + inputs[i] + " " + operation + " ";
+            }
+            calcString = calcString + "is " + result + ".\n";
+            return calcString;
+        }
+
+        public string getCalculationString(double[] inputs, double[] results, string operation)
+        {
+            string calcString = "";
+            for (int i = 0; i < results.Length; i++)
+            {
+                calcString = calcString + inputs[i] + " " + operation + " is " + results[i] + ".\n";
+            }
+            return calcString;
         }
     }
 }
