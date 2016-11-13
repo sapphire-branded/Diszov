@@ -135,5 +135,43 @@ namespace THEFIRSTAAAAAAAAAAAAAAAAA
             }
             return calcString;
         }
+
+        public int getNumberBetween(int min, int max)
+        {
+            Random r = new Random();
+            int rInt = r.Next(min, max); //for ints
+            return rInt;
+        }
+
+        public int[] getNumbersBetween(int min, int max, int numOfNumbers)
+        {
+            Random r = new Random();
+            int[] rInt = new int[numOfNumbers];
+            for (int i = 0; i < numOfNumbers; i++)
+            {
+                rInt[i] = r.Next(min, max);
+            }
+            return rInt;
+        }
+
+        public double getNumberBetween(double min, double max)
+        {
+            Random r = new Random();
+            double range = max - min;
+            double rDouble = ((r.NextDouble() * range) + min);
+            return rDouble;
+        }
+
+        public double[] getNumbersBetween(double min, double max, int numOfNumbers)
+        {
+            Random r = new Random();
+            double range = max - min;
+            double[] rDouble = new double[numOfNumbers];
+            for (int i = 0; i < numOfNumbers; i++)
+            {
+                rDouble[i] = ((r.NextDouble() * range) + min);
+            }
+            return rDouble;
+        }
     }
 }
