@@ -174,6 +174,9 @@ namespace ZovPractice
                 Console.WriteLine("Phase one complete. Initializing phase two.");
                 Console.ReadLine();
 
+            //[DISVA]: A+!
+            //Part B is complete!
+
             /* C)
             * Make a program that asks a user for 2 numbers, then divides them and prints the answer, but checks to make sure it isn't dividing by zero. */
                 Console.WriteLine("Insert Num3");
@@ -204,7 +207,9 @@ namespace ZovPractice
 
                 Console.WriteLine("Phase two complete. Initializing the final phase.");
                 Console.ReadLine();
-
+            
+            //[DISVA]: A+!
+            //Part C is complete!
 
             /* D)
             * Make a program that takes two names and two ages, and does the following:
@@ -231,6 +236,7 @@ namespace ZovPractice
                 int Age2 = int.Parse(Age2Txt);
                 Console.WriteLine("Age2 = " + Age2);
 
+                //[DISVA]: Note: the error is within the following block of if statements!
                 if ((Name1 == Name2) && (Age1 >= (Age2 - 5)) && (Age1 <= (Age2 + 5)))
                 {
                     Console.WriteLine("How neat!");
@@ -264,6 +270,7 @@ namespace ZovPractice
                 Console.ReadLine();
                 Environment.Exit(0);
                 }
+            //[DISVA]: Still incomplete, look for the error above!
 
         }
     }
