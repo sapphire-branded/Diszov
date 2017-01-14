@@ -20,6 +20,10 @@ namespace ZovPractice
     {
         static void Main(string[] args)
         {
+
+            /*
+             * A)
+             * Make a program that asks a user for 2 numbers, then adds them and prints the value.
             Console.WriteLine("P L E A S E");
             Thread.Sleep(1000);
             Console.WriteLine("I N S E R T");
@@ -64,7 +68,32 @@ namespace ZovPractice
             Console.WriteLine("Thank you for your assistance. Your result is: " + SumOfOnePlusTwo);
             Thread.Sleep(5000);
 
-            Environment.Exit(0);
+            Environment.Exit(0); 
+
+            [DISVA]: A+!
+            Part A is complete!
+             */
+
+            /*
+             * B)
+             * Make a program that asks a user for 2 numbers, then prints the larger one
+             */
+
+            /*
+             * C)
+             * Make a program that asks a user for 2 numbers, then divides them and prints the answer, but checks to make sure it isn't dividing by zero.
+             */
+
+            /*
+             * D)
+             * Make a program that takes two names and two ages, and does the following:
+             * If the names are the same, and the ages are within 5 years of each other: Print "How neat!"
+             * If the ages are within 2 years of each other: Print: "They might know each other!" BUT
+             * If the ages are the same: Print: "They probably know each other well!" instead
+             * If the ages and names are the same: Print: "Uh oh, how confusing!" instead of anything else
+             * If the names are not the same, and the ages are further than 2 years apart: Print: "They probably don't know each other" instead of anything else
+             */
+
         }
     }
 }
