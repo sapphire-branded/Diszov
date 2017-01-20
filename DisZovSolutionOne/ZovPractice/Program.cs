@@ -237,27 +237,30 @@ namespace ZovPractice
                 Console.WriteLine("Age2 = " + Age2);
 
                 //[DISVA]: Note: the error is within the following block of if statements!
-                if ((Name1 == Name2) && (Age1 >= (Age2 - 5)) && (Age1 <= (Age2 + 5)))
-                {
-                    Console.WriteLine("How neat!");
-                }
-                if (Age1 >= (Age2 - 2) && Age1 <= (Age2 + 2))
-                {
-                    Console.WriteLine("They might know each other!");
-                }
-                if (Age1 == Age2)
-                {
-                    Console.WriteLine("They probably know each other well!");
-                }
                 if ((Name1 == Name2) && (Age1 == Age2))
                 {
                     Console.WriteLine("Uh oh, how confusing!");
                 }
-                if (((Name1 == Name2) == false) && (Age1 < (Age2 - 2)) && (Age1 > (Age2 + 2)))
+                else
                 {
-                    Console.WriteLine("They probably don't know each other.");
+                    if (((Name1 == Name2) == false) && (Age1 < (Age2 - 2)) && (Age1 > (Age2 + 2)))
+                    {
+                        Console.WriteLine("They probably don't know each other.");
+                    }
+                    else if ((Name1 == Name2) && (Age1 >= (Age2 - 5)) && (Age1 <= (Age2 + 5)))
+                    {
+                        Console.WriteLine("How neat!");
+                    }
+                    if (Age1 == Age2)
+                    {
+                        Console.WriteLine("They probably know each other well!");
+                    }
+                    else if (Age1 >= (Age2 - 2) && Age1 <= (Age2 + 2))
+                    {
+                        Console.WriteLine("They might know each other!");
+                    }
+                    else Failure = true;
                 }
-                else Failure = true;
                 Console.ReadLine();
             }
             if (Failure == true)
