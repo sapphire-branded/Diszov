@@ -253,10 +253,11 @@ namespace ZovPractice
                 {
                     Console.WriteLine("Uh oh, how confusing!");
                 }
-                else
+                if (((Name1 == Name2) == false) && (Age1 < (Age2 - 2)) && (Age1 > (Age2 + 2)))
                 {
                     Console.WriteLine("They probably don't know each other.");
                 }
+                else Failure = true;
                 Console.ReadLine();
             }
             if (Failure == true)
